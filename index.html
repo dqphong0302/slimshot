@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="vi" class="dark">
+<html lang="vi">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGG3TMNVXV"></script>
@@ -15,7 +15,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SlimShot — Nén &amp; Tối Ưu Hóa Ảnh Hàng Loạt | phongdang.io.vn</title>
   <meta name="description" content="SlimShot: Công cụ nén ảnh và chuyển đổi định dạng hàng loạt online (JPG, PNG, WebP) — xử lý 100% trong RAM trình duyệt, bảo mật tuyệt đối, hỗ trợ tải về file .zip và so sánh Trước/Sau." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><text y=%2252%22 font-size=%2252%22>⚡</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%231d4f91%22/><text x=%2216%22 y=%2222%22 font-family=%22Inter,Arial,sans-serif%22 font-size=%2218%22 font-weight=%22600%22 fill=%22white%22 text-anchor=%22middle%22>S</text></svg>" />
 
   <!-- Ngăn nhấp nháy theme: áp dụng theme đã lưu trước khi paint -->
   <script>
@@ -23,7 +23,7 @@
       try {
         var t = localStorage.getItem('pd_theme');
         if (t !== 'light' && t !== 'dark') {
-          t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          t = 'light';
         }
         var isDark = t === 'dark';
         document.documentElement.classList.toggle('dark', isDark);
@@ -35,7 +35,7 @@
   <!-- Google Fonts CDN -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- PhongDang UI Design System Stylesheet & App CSS -->
   <link rel="stylesheet" href="./vendor/pdui/pdui.css">
@@ -61,9 +61,8 @@
       </a>
 
       <div class="header-actions pd-header__actions">
-        <button id="themeToggle" class="btn-theme" data-pd-theme-toggle title="Chuyển chế độ Sáng / Tối">
-          <span id="themeIcon" data-pd-theme-icon>☀️</span>
-          <span id="themeLabel" data-pd-theme-label>Sáng</span>
+        <button id="themeToggle" type="button" class="pd-icon-btn pd-icon-btn--ghost" data-pd-theme-toggle aria-label="Chuyển giao diện Sáng / Tối" title="Sáng / Tối">
+          <span id="themeIcon" data-pd-theme-icon></span>
         </button>
       </div>
     </div>
@@ -76,10 +75,10 @@
       <!-- Hero Header Section -->
       <section class="cs-hero-header">
         <div class="cs-badge-group">
-          <span class="cs-hero-badge primary">✨ 100% Client-Side</span>
-          <span class="cs-hero-badge indigo">⚡ Nén Hàng Loạt (Batch)</span>
-          <span class="cs-hero-badge emerald">🌐 Chuyển Đổi WebP</span>
-          <span class="cs-hero-badge amber">📦 Tải File .Zip</span>
+          <span class="cs-hero-badge primary">100% Client-Side</span>
+          <span class="cs-hero-badge indigo">Nén Hàng Loạt (Batch)</span>
+          <span class="cs-hero-badge emerald">Chuyển Đổi WebP</span>
+          <span class="cs-hero-badge amber">Tải File .Zip</span>
         </div>
         <h1 class="cs-hero-title">Nén &amp; <span class="cs-highlight">tối ưu hóa ảnh</span> siêu tốc trên trình duyệt</h1>
         <p class="cs-hero-desc">
@@ -229,8 +228,8 @@
           </div>
         </div>
         <div class="cs-feats-actions">
-          <a class="cs-btn-ghost" href="https://clearshot.phongdang.io.vn" target="_blank" rel="noopener">🧹 Thử ClearShot (Xóa metadata &amp; C2PA) →</a>
-          <a class="cs-btn-ghost" href="https://phongdang.io.vn" target="_blank" rel="noopener">🏛️ Khám phá hệ sinh thái phongdang.io.vn</a>
+          <a class="cs-btn-ghost" href="https://clearshot.phongdang.io.vn" target="_blank" rel="noopener">Thử ClearShot (Xóa metadata &amp; C2PA) →</a>
+          <a class="cs-btn-ghost" href="https://phongdang.io.vn" target="_blank" rel="noopener">Khám phá hệ sinh thái phongdang.io.vn</a>
         </div>
       </section>
 
@@ -259,13 +258,12 @@
 
   <!-- Footer -->
   <footer class="pd-footer">
+      <p class="pd-eco-line">Hệ sinh thái của ThS. Đặng Quốc Phong: <a href="https://phongdang.io.vn" target="_blank" rel="noopener noreferrer">phongdang.io.vn</a> · <a href="https://classtools.vn" target="_blank" rel="noopener noreferrer">classtools.vn</a></p>
     <div class="pd-container pd-footer__inner">
       <div class="pd-footer__copy">
         © 2026 SlimShot • Phát triển bởi <a href="https://phongdang.io.vn" target="_blank" rel="noopener noreferrer">ThS. Đặng Quốc Phong</a> (ĐH Y Dược TP.HCM)
       </div>
       <div class="pd-footer__links">
-        <a href="https://phongdang.io.vn" target="_blank" rel="noopener noreferrer">phongdang.io.vn</a>
-        <a href="https://classtools.vn" target="_blank" rel="noopener noreferrer">ClassTools.vn</a>
         <a href="https://github.com/dqphong0302" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>

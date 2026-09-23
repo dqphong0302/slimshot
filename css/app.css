@@ -10,10 +10,6 @@
 
 body {
   background-color: var(--bg-body);
-  background-image: 
-    radial-gradient(ellipse 90% 50% at 50% -10%, rgba(30, 64, 175, 0.07), transparent 70%),
-    radial-gradient(ellipse 60% 40% at 85% 90%, rgba(79, 70, 229, 0.05), transparent 70%);
-  background-attachment: fixed;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,10 +17,6 @@ body {
 
 html.dark body {
   background-color: var(--bg-body);
-  background-image: 
-    radial-gradient(ellipse 90% 50% at 50% -10%, rgba(96, 165, 250, 0.12), transparent 70%),
-    radial-gradient(ellipse 60% 40% at 85% 90%, rgba(129, 140, 248, 0.08), transparent 70%);
-  background-attachment: fixed;
 }
 
 .cs-container {
@@ -64,51 +56,36 @@ html.dark body {
   align-items: center;
   gap: 0.3rem;
   font-size: 0.71875rem;
-  font-weight: 700;
+  font-weight: 500;
   padding: 0.22rem 0.7rem;
   border-radius: var(--radius-full);
   letter-spacing: 0.02em;
 }
 
 .cs-hero-badge.primary {
-  background: rgba(30, 64, 175, 0.08);
-  color: #1e40af;
-  border: 1px solid rgba(30, 64, 175, 0.2);
+  background: var(--accent-soft);
+  border-color: transparent;
+  color: var(--accent-text);
 }
 
-html.dark .cs-hero-badge.primary {
-  background: rgba(96, 165, 250, 0.15);
-  color: #93c5fd;
-  border-color: rgba(96, 165, 250, 0.3);
-}
 
 .cs-hero-badge.indigo {
-  background: rgba(79, 70, 229, 0.08);
-  color: #4338ca;
-  border: 1px solid rgba(79, 70, 229, 0.2);
+  background: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-muted);
 }
 
-html.dark .cs-hero-badge.indigo {
-  background: rgba(129, 140, 248, 0.15);
-  color: #c7d2fe;
-  border-color: rgba(129, 140, 248, 0.3);
-}
 
 .cs-hero-badge.emerald {
-  background: rgba(16, 185, 129, 0.08);
-  color: #047857;
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  background: var(--bg-card);
+  border-color: var(--border-color);
+  color: var(--text-muted);
 }
 
-html.dark .cs-hero-badge.emerald {
-  background: rgba(16, 185, 129, 0.15);
-  color: #6ee7b7;
-  border-color: rgba(16, 185, 129, 0.3);
-}
 
 .cs-hero-title {
   font-size: clamp(1.5rem, 3.5vw, 2.1rem);
-  font-weight: 800;
+  font-weight: 700;
   color: var(--text-main);
   line-height: 1.22;
   margin: 0 0 0.5rem;
@@ -117,15 +94,6 @@ html.dark .cs-hero-badge.emerald {
 
 .cs-highlight {
   color: var(--primary);
-  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-html.dark .cs-highlight {
-  background: linear-gradient(135deg, #60a5fa 0%, #93c5fd 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .cs-hero-desc {
@@ -170,7 +138,7 @@ html.dark .cs-highlight {
 
 .cs-dropzone {
   margin-top: 1.5rem;
-  border: 2px dashed rgba(30, 64, 175, 0.25);
+  border: 2px dashed rgba(29, 79, 145, 0.25);
   border-radius: var(--radius-xl);
   padding: 2.75rem 1.5rem;
   text-align: center;
@@ -183,25 +151,25 @@ html.dark .cs-highlight {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+  box-shadow: 0 1px 3px rgba(28, 25, 23, 0.03);
 }
 
 html.dark .cs-dropzone {
-  border-color: rgba(96, 165, 250, 0.25);
+  border-color: rgba(127, 176, 238, 0.25);
   background: var(--bg-card);
 }
 
 .cs-dropzone:hover,
 .cs-dropzone.over {
   border-color: var(--primary);
-  background: rgba(30, 64, 175, 0.03);
-  box-shadow: 0 8px 24px -4px rgba(30, 64, 175, 0.12);
+  background: rgba(29, 79, 145, 0.03);
+  box-shadow: 0 8px 24px -4px rgba(29, 79, 145, 0.12);
   transform: translateY(-1px);
 }
 
 html.dark .cs-dropzone:hover,
 html.dark .cs-dropzone.over {
-  background: rgba(96, 165, 250, 0.08);
+  background: rgba(127, 176, 238, 0.08);
   box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.4);
 }
 
@@ -209,7 +177,7 @@ html.dark .cs-dropzone.over {
   width: 54px;
   height: 54px;
   border-radius: 16px;
-  background: rgba(30, 64, 175, 0.08);
+  background: rgba(29, 79, 145, 0.08);
   color: var(--primary);
   display: flex;
   align-items: center;
@@ -219,7 +187,7 @@ html.dark .cs-dropzone.over {
 }
 
 html.dark .cs-drop-icon {
-  background: rgba(96, 165, 250, 0.15);
+  background: rgba(127, 176, 238, 0.15);
 }
 
 .cs-dropzone:hover .cs-drop-icon {
@@ -299,7 +267,7 @@ html.dark .cs-notice {
   gap: 1.25rem;
   flex-wrap: wrap;
   align-items: center;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+  box-shadow: 0 1px 3px rgba(28, 25, 23, 0.03);
   animation: csFadeIn 0.25s ease;
 }
 
@@ -352,7 +320,7 @@ html.dark .cs-notice {
 
 .cs-seg button.on {
   background: var(--primary);
-  color: #ffffff;
+  color: var(--on-primary);
 }
 
 .cs-range-wrap {
@@ -419,15 +387,15 @@ html.dark .cs-notice {
   flex-wrap: wrap;
   margin-top: 1.25rem;
   padding: 1.25rem 1.5rem;
-  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-  color: #ffffff;
+  background: var(--primary);
+  color: var(--on-primary);
   border-radius: var(--radius-xl);
-  box-shadow: 0 8px 24px -6px rgba(30, 64, 175, 0.35);
+  box-shadow: 0 8px 24px -6px rgba(29, 79, 145, 0.35);
   animation: csFadeIn 0.25s ease;
 }
 
 html.dark .cs-summary {
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  background: var(--primary-hover);
   box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.5);
 }
 
@@ -442,7 +410,7 @@ html.dark .cs-summary {
 
 .cs-s-num {
   font-size: 1.65rem;
-  font-weight: 800;
+  font-weight: 700;
   font-family: var(--font-mono);
   line-height: 1.1;
 }
@@ -458,7 +426,7 @@ html.dark .cs-summary {
 
 .cs-btn-light {
   background: #ffffff;
-  color: #1e40af;
+  color: var(--primary);
   border: none;
   border-radius: var(--radius-md);
   padding: 0.65rem 1.25rem;
@@ -579,13 +547,13 @@ html.dark .badge-same {
 }
 
 .badge-fmt {
-  background: rgba(30, 64, 175, 0.1);
+  background: rgba(29, 79, 145, 0.1);
   color: var(--primary);
 }
 
 html.dark .badge-fmt {
-  background: rgba(96, 165, 250, 0.15);
-  color: #93c5fd;
+  background: rgba(127, 176, 238, 0.15);
+  color: var(--primary);
 }
 
 .badge-dim {
@@ -669,7 +637,7 @@ html.dark .badge-fmt {
 .cs-modal-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(15, 23, 42, 0.65);
+  background: rgba(28, 25, 23, 0.65);
   backdrop-filter: blur(4px);
 }
 
@@ -688,7 +656,7 @@ html.dark .badge-fmt {
 .cs-modal-title {
   margin: 0 0 0.25rem;
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--text-main);
 }
 
@@ -765,7 +733,7 @@ html.dark .badge-fmt {
   font-weight: 700;
   padding: 0.2rem 0.6rem;
   border-radius: var(--radius-full);
-  background: rgba(15, 23, 42, 0.7);
+  background: rgba(28, 25, 23, 0.7);
   color: #ffffff;
 }
 
@@ -804,7 +772,7 @@ html.dark .badge-fmt {
 
 .cs-feats-title {
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--text-main);
   margin: 0 0 0.35rem;
 }
